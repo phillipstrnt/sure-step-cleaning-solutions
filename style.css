@@ -5983,3 +5983,889 @@ min-width:260px;
 
 
 }
+
+
+
+
+
+/* ================= TEAM SECTION ================= */
+
+.team-section {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.team-container {
+    width: 90%;
+    margin: auto;
+}
+
+
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+
+.team-title-box h5 {
+    color: #009688;
+    font-size: 18px;
+}
+
+.team-title-box h2 {
+    font-size: 40px;
+    max-width: 500px;
+}
+
+
+.team-desc-box {
+    max-width: 500px;
+}
+
+
+/* Carousel */
+
+.team-carousel-wrapper {
+    position: relative;
+}
+
+
+.team-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.team-track {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.6s ease-in-out;
+}
+
+
+/* Cards */
+
+.team-card {
+    min-width: calc(33.333% - 20px);
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+.team-img-box {
+    position: relative;
+    height: 350px;
+}
+
+
+.team-img-box img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+
+/* Social icons */
+
+.team-socials {
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:15px;
+}
+
+
+.team-socials a {
+    width:40px;
+    height:40px;
+    background:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#009688;
+}
+
+
+
+/* Info */
+
+.team-info-box {
+    padding:20px;
+    text-align:center;
+}
+
+
+.team-info-box h3 {
+    margin-bottom:8px;
+}
+
+
+
+/* Buttons */
+
+.team-nav-btn {
+
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:none;
+    cursor:pointer;
+    background:#009688;
+    color:white;
+    z-index:5;
+
+}
+
+
+.team-prev {
+    left:-20px;
+}
+
+
+.team-next {
+    right:-20px;
+}
+
+
+
+
+/* ================= RESPONSIVE ================= */
+
+
+@media(max-width:992px){
+
+    .team-card{
+        min-width:calc(50% - 15px);
+    }
+
+
+    .team-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .team-card{
+        min-width:100%;
+    }
+
+
+    .team-title-box h2{
+        font-size:28px;
+    }
+
+
+    .team-img-box{
+        height:300px;
+    }
+
+
+    .team-prev{
+        left:5px;
+    }
+
+
+    .team-next{
+        right:5px;
+    }
+
+}
+
+
+/* ================= TEAM SECTION ================= */
+
+.team-section {
+    padding: 80px 0;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+
+.team-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.team-header {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+
+    margin-bottom:50px;
+
+}
+
+
+.team-title-box {
+    flex:1;
+}
+
+
+.team-title-box h5 {
+
+    color:#009688;
+    font-size:18px;
+    letter-spacing:1px;
+    margin-bottom:10px;
+
+}
+
+
+.team-title-box h2 {
+
+    font-size:38px;
+    line-height:1.2;
+    color:#222;
+
+}
+
+
+
+.team-desc-box {
+
+    flex:1;
+
+}
+
+
+.team-desc-box p {
+
+    color:#555;
+    line-height:1.7;
+    font-size:16px;
+
+}
+
+
+
+/* ================= CAROUSEL ================= */
+
+
+.team-carousel-wrapper {
+
+    position:relative;
+    width:100%;
+
+}
+
+
+.team-track-container {
+
+    width:100%;
+    overflow:hidden;
+
+}
+
+
+
+.team-track {
+
+    display:flex;
+    gap:20px;
+
+    width:max-content;
+
+    animation:teamScroll 25s linear infinite;
+
+}
+
+
+
+/* Infinite movement */
+
+@keyframes teamScroll {
+
+
+    from {
+
+        transform:translateX(0);
+
+    }
+
+
+    to {
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+
+
+
+/* ================= TEAM CARDS ================= */
+
+
+.team-card {
+
+    width:260px;
+    height:auto;
+
+    flex-shrink:0;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.12);
+
+    transition:transform .3s ease;
+
+}
+
+
+
+.team-card:hover {
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/* Image */
+
+
+.team-img-box {
+
+    width:100%;
+    height:280px;
+
+    position:relative;
+
+}
+
+
+.team-img-box img {
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+
+/* Social icons */
+
+
+.team-socials {
+
+    position:absolute;
+
+    bottom:15px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+
+
+.team-socials a {
+
+    width:35px;
+    height:35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:white;
+
+    border-radius:50%;
+
+    color:#009688;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+.team-socials a:hover {
+
+    background:#009688;
+    color:white;
+
+}
+
+
+
+/* Information */
+
+
+.team-info-box {
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+
+.team-info-box h3 {
+
+    font-size:19px;
+
+    margin-bottom:8px;
+
+    color:#222;
+
+}
+
+
+
+.team-info-box p {
+
+    font-size:14px;
+
+    color:#777;
+
+}
+
+
+
+
+/* ================= BUTTONS ================= */
+
+
+.team-nav-btn {
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#009688;
+
+    color:white;
+
+    z-index:10;
+
+}
+
+
+.team-prev {
+
+    left:10px;
+
+}
+
+
+
+.team-next {
+
+    right:10px;
+
+}
+
+
+
+/* ================= LARGE SCREENS ================= */
+
+
+@media(min-width:1200px){
+
+    .team-card {
+
+        width:260px;
+
+    }
+
+
+}
+
+
+
+/* ================= TABLETS ================= */
+
+
+@media(max-width:992px){
+
+
+.team-header{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+.team-title-box h2{
+
+    font-size:32px;
+
+}
+
+
+
+.team-card{
+
+    width:230px;
+
+}
+
+
+.team-img-box{
+
+    height:250px;
+
+}
+
+
+}
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:600px){
+
+
+.team-container{
+
+    width:95%;
+
+}
+
+
+
+.team-title-box h2{
+
+    font-size:26px;
+
+}
+
+
+
+.team-desc-box p{
+
+    font-size:14px;
+
+}
+
+
+
+.team-track{
+
+    gap:15px;
+
+}
+
+
+
+.team-card{
+
+    width:85vw;
+
+}
+
+
+
+.team-img-box{
+
+    height:300px;
+
+}
+
+
+
+.team-nav-btn{
+
+    width:38px;
+    height:38px;
+
+}
+
+
+
+}
+
+
+
+
+/* ================= SMALL PHONES ================= */
+
+
+@media(max-width:400px){
+
+
+.team-card{
+
+    width:90vw;
+
+}
+
+
+.team-img-box{
+
+    height:260px;
+
+}
+
+
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Open Button */
+.open-btn {
+  background-color: #e25822;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Background Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+/* Active Modal State */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Main Form Card */
+.form-container {
+  background: #ffffff;
+  width: 90%;
+  max-width: 650px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+/* Orange Top Header Bar */
+.form-header {
+  background-color: #e25822; /* BUILD Orange */
+  color: #ffffff;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Form Body */
+.subscribe-form {
+  padding: 24px 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: #e25822;
+}
+
+/* Inputs & Icon styling */
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.input-icon-wrapper .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 14px;
+}
+
+.input-icon-wrapper input {
+  width: 100%;
+  padding: 12px 12px 12px 36px;
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-icon-wrapper.no-icon input {
+  padding-left: 12px;
+}
+
+.input-icon-wrapper input:focus, select:focus {
+  border-color: #e25822;
+  background-color: #fff;
+}
+
+/* Custom Dropdown Select */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding: 12px;
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.select-wrapper::after {
+  content: '▼';
+  font-size: 10px;
+  color: #666;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Privacy Section */
+.privacy-text {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #e25822;
+}
+
+/* Green Submit Button */
+.submit-container {
+  margin-top: 24px;
+}
+
+.submit-btn {
+  background-color: #2e7d32; /* Green submit button from screenshot */
+  color: #ffffff;
+  border: none;
+  padding: 12px 36px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #246627;
+}

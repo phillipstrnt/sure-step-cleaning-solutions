@@ -591,3 +591,39 @@ window.addEventListener("resize", ()=>{
 
 
 
+const teamTrack = document.getElementById("teamTrack");
+
+
+// Clone cards for endless movement
+
+const cards = [...teamTrack.children];
+
+
+cards.forEach(card => {
+
+    const clone = card.cloneNode(true);
+
+    teamTrack.appendChild(clone);
+
+});
+
+
+
+// Pause on hover
+
+teamTrack.addEventListener("mouseenter",()=>{
+
+    teamTrack.style.animationPlayState="paused";
+
+});
+
+
+teamTrack.addEventListener("mouseleave",()=>{
+
+    teamTrack.style.animationPlayState="running";
+
+});
+
+
+
+
