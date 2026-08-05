@@ -749,3 +749,105 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("ssgContactForm");
+
+  // Input Elements
+  const nameInput = document.getElementById("ssgName");
+  const emailInput = document.getElementById("ssgEmail");
+  const phoneInput = document.getElementById("ssgPhone");
+  const messageInput = document.getElementById("ssgMessage");
+
+  // Error Elements
+  const nameError = document.getElementById("ssgNameError");
+  const emailError = document.getElementById("ssgEmailError");
+  const phoneError = document.getElementById("ssgPhoneError");
+  const messageError = document.getElementById("ssgMessageError");
+
+  // Helper functions for showing/clearing errors
+  function showError(element, message) {
+    element.textContent = message;
+    element.style.display = "block";
+  }
+
+  function clearError(element) {
+    element.textContent = "";
+  }
+
+  // Regex Patterns
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Accepts formats like: +256 700 000000, 0700000000, +256700000000
+  const phoneRegex = /^(\+?\d{1,4}[\s-]?)?\(?\d{2,4}\)?[\s-]?\d{3,4}[\s-]?\d{3,4}$/;
+
+  // Clear errors live on input/typing
+  nameInput.addEventListener("input", () => clearError(nameError));
+  emailInput.addEventListener("input", () => clearError(emailError));
+  phoneInput.addEventListener("input", () => clearError(phoneError));
+  messageInput.addEventListener("input", () => clearError(messageError));
+
+  // Form Submit Listener
+  form.addEventListener("submit", function (e) {
+    let isValid = true;
+
+    // 1. Validate Full Name
+    if (nameInput.value.trim() === "") {
+      showError(nameError, "Please enter your full name.");
+      isValid = false;
+    } else if (nameInput.value.trim().length < 2) {
+      showError(nameError, "Name must be at least 2 characters long.");
+      isValid = false;
+    } else {
+      clearError(nameError);
+    }
+
+    // 2. Validate Email Address
+    if (emailInput.value.trim() === "") {
+      showError(emailError, "Please enter your email address.");
+      isValid = false;
+    } else if (!emailRegex.test(emailInput.value.trim())) {
+      showError(emailError, "Please enter a valid email address.");
+      isValid = false;
+    } else {
+      clearError(emailError);
+    }
+
+    // 3. Validate Phone Number
+    if (phoneInput.value.trim() === "") {
+      showError(phoneError, "Please enter your phone number.");
+      isValid = false;
+    } else if (!phoneRegex.test(phoneInput.value.trim())) {
+      showError(phoneError, "Please enter a valid phone number.");
+      isValid = false;
+    } else {
+      clearError(phoneError);
+    }
+
+    // 4. Validate Message
+    if (messageInput.value.trim() === "") {
+      showError(messageError, "Please enter your message or service details.");
+      isValid = false;
+    } else if (messageInput.value.trim().length < 10) {
+      showError(
+        messageError,
+        "Please provide a bit more detail (at least 10 characters)."
+      );
+      isValid = false;
+    } else {
+      clearError(messageError);
+    }
+
+    // Prevent form submission if any field failed validation
+    if (!isValid) {
+      e.preventDefault();
+    }
+  });
+});
+
+

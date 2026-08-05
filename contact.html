@@ -65,104 +65,134 @@
     </section>
 
 <!-- Contact Section -->
-<section class="contact-section" id="contact">
-    <div class="container">
-        <div class="contact-header-wrapper">
-            <div class="contact-title-area">
-                <span class="sub-heading">CONTACT US</span>
-                <h2>Contact Us For Cleaning Services</h2>
-            </div>
-            <p class="contact-top-desc">
-               ✓ Professional and experienced cleaning team<br>
-              ✓ Flexible cleaning schedules to suit your needs<br>
-              ✓ Eco-friendly cleaning products for a safe environment<br>
-              ✓ Quality service with attention to every detail<br>
-              ✓ Affordable solutions for homes and businesses<br>
-              ✓ Fast response and reliable customer support
-            </p>
-        </div>
-
-       <form class="contact-form" id="contactForm">
-
-    <div class="form-row">
-
-        <div class="input-group">
-            <input 
-            type="text" 
-            name="name" 
-            id="name"
-            placeholder="Your Name" 
-            class="form-input">
-
-            <small class="error" id="nameError"></small>
-        </div>
-
-
-        <div class="input-group">
-
-            <input 
-            type="email" 
-            name="email" 
-            id="email"
-            placeholder="Your Email" 
-            class="form-input">
-
-            <small class="error" id="emailError"></small>
-
-        </div>
-
+<section class="ssg-contact-section" id="ssg-contact">
+  <div class="ssg-container">
+    <div class="ssg-contact-header-wrapper">
+      <div class="ssg-contact-title-area">
+        <span class="ssg-sub-heading">CONTACT US</span>
+        <h2>Contact Us For Cleaning Services</h2>
+      </div>
+      <ul class="ssg-contact-features">
+        <li><span>✓</span> Professional and experienced cleaning team</li>
+        <li><span>✓</span> Flexible cleaning schedules to suit your needs</li>
+        <li><span>✓</span> Eco-friendly cleaning products for a safe environment</li>
+        <li><span>✓</span> Quality service with attention to every detail</li>
+        <li><span>✓</span> Affordable solutions for homes and businesses</li>
+        <li><span>✓</span> Fast response and reliable customer support</li>
+      </ul>
     </div>
 
+    <!-- Glassmorphic Card Container -->
+    <div class="ssg-glass-card">
+      <form class="ssg-contact-form" id="ssgContactForm" action="https://formsubmit.co/info@surestepcleaners.com" method="POST">
+        
+        <!-- FormSubmit Configuration -->
+        <input type="hidden" name="_subject" value="New Cleaning Service Inquiry">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
 
-
-    <div class="form-row">
-
-        <div class="input-group">
-
+        <div class="ssg-form-row">
+          <div class="ssg-input-group">
+            <label for="ssgName">Full Name *</label>
             <input 
-            type="text" 
-            name="subject" 
-            id="subject"
-            placeholder="Subject" 
-            class="form-input full-width">
+              type="text" 
+              name="ssg_name" 
+              id="ssgName"
+              placeholder="e.g. Akankwasa Feliz" 
+              class="ssg-form-input" 
+              required>
+            <small class="ssg-error" id="ssgNameError"></small>
+          </div>
 
-            <small class="error" id="subjectError"></small>
-
+          <div class="ssg-input-group">
+            <label for="ssgEmail">Email Address *</label>
+            <input 
+              type="email" 
+              name="ssg_email" 
+              id="ssgEmail"
+              placeholder="e.g. akankwasafeliz@example.com" 
+              class="ssg-form-input" 
+              required>
+            <small class="ssg-error" id="ssgEmailError"></small>
+          </div>
         </div>
 
-    </div>
+        <div class="ssg-form-row">
+          <div class="ssg-input-group">
+            <label for="ssgPhone">Phone Number *</label>
+            <input 
+              type="tel" 
+              name="ssg_phone" 
+              id="ssgPhone"
+              placeholder="+256 700 000000" 
+              class="ssg-form-input" 
+              required>
+            <small class="ssg-error" id="ssgPhoneError"></small>
+          </div>
 
+          <div class="ssg-input-group">
+            <label for="ssgService">Service Required</label>
+            <select name="ssg_service" id="ssgService" class="ssg-form-input ssg-select">
+              <option value="" disabled selected>Select a service</option>
+              <option value="residential">Residential Cleaning</option>
+              <option value="commercial">Commercial / Office Cleaning</option>
+              <option value="deep-cleaning">Deep Cleaning</option>
+              <option value="move-in-out">Move-In / Move-Out Cleaning</option>
+              <option value="other">Other / Custom Request</option>
+            </select>
+            <small class="ssg-error" id="ssgServiceError"></small>
+          </div>
+        </div>
 
+        <div class="ssg-form-row">
+          <div class="ssg-input-group">
+            <label for="ssgDate">Preferred Cleaning Date</label>
+            <input 
+              type="date" 
+              name="ssg_date" 
+              id="ssgDate" 
+              class="ssg-form-input">
+            <small class="ssg-error" id="ssgDateError"></small>
+          </div>
 
-    <div class="form-row">
+          <div class="ssg-input-group">
+            <label for="ssgSubject">Subject</label>
+            <input 
+              type="text" 
+              name="ssg_subject" 
+              id="ssgSubject"
+              placeholder="Inquiry Subject" 
+              class="ssg-form-input">
+            <small class="ssg-error" id="ssgSubjectError"></small>
+          </div>
+        </div>
 
-        <div class="input-group">
-
+        <div class="ssg-form-row">
+          <div class="ssg-input-group ssg-full-width">
+            <label for="ssgMessage">Message / Specific Requirements *</label>
             <textarea 
-            name="message" 
-            id="message"
-            placeholder="Message" 
-            rows="5"
-            class="form-input full-width"></textarea>
-
-
-            <small class="error" id="messageError"></small>
-
+              name="ssg_message" 
+              id="ssgMessage"
+              placeholder="Tell us about the space size, special requests, or questions..." 
+              rows="4"
+              class="ssg-form-input" 
+              required></textarea>
+            <small class="ssg-error" id="ssgMessageError"></small>
+          </div>
         </div>
 
+        <button type="submit" class="ssg-submit-btn">
+          Send Message
+        </button>
+
+        <p id="ssgFormStatus" class="ssg-form-status"></p>
+
+      </form>
     </div>
+  </div>
+</section>
 
 
-
-    <button type="submit" class="submit-btn">
-        Send Message
-    </button>
-
-
-    <p id="formStatus" class="form-status"></p>
-
-
-</form>
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-grid">
