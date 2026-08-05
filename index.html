@@ -15,7 +15,7 @@
     <div class="top-bar">
         <div class="container top-bar-container">
             <div class="contact-info">
-                <span><i class="fa fa-envelope"></i> info@example.com</span>
+                <span><i class="fa fa-envelope"></i> info@surestepcleaners.com</span>
                 <span class="divider">|</span>
                 <span><i class="fa fa-phone"></i> +256 789 384046</span>
             </div>
@@ -82,32 +82,49 @@
         </div>
     </section>
 
-    <!-- Info Cards Bar (Office, Email, Call) -->
-    <section class="info-bar">
-        <div class="container info-bar-container">
-            <div class="info-card yellow-card">
-                <div class="icon-box"><i class="fa fa-map-marker-alt"></i></div>
-                <div>
-                    <h3>Mukono </h3>
-                    <p>Mukono, Uganda</p>
-                </div>
+<!-- Refactored Info Cards Bar -->
+<section class="sb-info-bar">
+    <div class="sb-info-container">
+        
+        <!-- Card 1: Light Blue Accent -->
+        <div class="sb-info-card sb-card-blue">
+            <div class="sb-icon-wrapper">
+                <i class="fa fa-map-marker-alt"></i>
             </div>
-            <div class="info-card green-card">
-                <div class="icon-box"><i class="fa fa-envelope"></i></div>
-                <div>
-                    <h3>Email Us</h3>
-                    <p>info@example.com</p>
-                </div>
-            </div>
-            <div class="info-card yellow-card">
-                <div class="icon-box"><i class="fa fa-phone-alt"></i></div>
-                <div>
-                    <h3>Call Us</h3>
-                    <p>+256 789 384046</p>
-                </div>
+            <div class="sb-card-content">
+                <h3 class="sb-card-title">Mukono</h3>
+                <p class="sb-card-text">Mukono, Uganda</p>
             </div>
         </div>
-    </section>
+
+        <!-- Card 2: Green Accent -->
+        <div class="sb-info-card sb-card-green">
+            <div class="sb-icon-wrapper">
+                <i class="fa fa-envelope"></i>
+            </div>
+            <div class="sb-card-content">
+                <h3 class="sb-card-title">Email Us</h3>
+                <p class="sb-card-text">
+                    <a href="mailto:info@surestepcleaners.com">info@surestepcleaners.com</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 3: Light Blue Accent -->
+        <div class="sb-info-card sb-card-blue">
+            <div class="sb-icon-wrapper">
+                <i class="fa fa-phone-alt"></i>
+            </div>
+            <div class="sb-card-content">
+                <h3 class="sb-card-title">Call Us</h3>
+                <p class="sb-card-text">
+                    <a href="tel:+256789384046">+256 789 384046</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 <!-- ===============================
         ABOUT SECTION
@@ -217,285 +234,99 @@
 
 
 
-
-
-
 <!-- ===============================
         SERVICES SECTION
 ================================ -->
 
-<section class="services-section" id="services">
-
-
-<div class="container services-container">
-
-
-
-<div class="services-info reveal">
-
-
-<h5>
-OUR SERVICES
-</h5>
-
-
-<h2>
-Awesome Cleaning Services For You
-</h2>
-
-
-
-<p>
-
-From residential cleaning to commercial
-maintenance, we provide professional
-solutions designed to keep every space
-fresh, healthy and spotless.
-
-</p>
-
-
-
-<a href="services.html" class="btn-services">
-More Services
-</a>
-
-
-</div>
-
-
-
-
-
-
-<div class="services-carousel-wrapper reveal">
-
-
-
-<button class="carousel-btn prev-btn" id="prevBtn">
-
-<i class="fa fa-chevron-left"></i>
-
-</button>
-
-
-
-<div class="services-track-container">
-
-
-<div class="services-track" id="servicesTrack">
-
-
-
-
-
-<div class="service-card">
-
-<div class="service-img">
-
-<img src="images/housecleaning1.png">
-
-</div>
-
-
-<div class="service-content">
-
-<div class="service-icon">
-
-<i class="fa fa-home"></i>
-
-</div>
-
-
-<h3>
-Home Cleaning
-</h3>
-
-
-<p>
-Complete cleaning solutions for your home.
-</p>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-<div class="service-card">
-
-<div class="service-img">
-
-<img src="images/cleaning6.jpg">
-
-</div>
-
-
-<div class="service-content">
-
-<div class="service-icon">
-
-<i class="fa fa-window-maximize"></i>
-
-</div>
-
-
-<h3>
-Window Cleaning
-</h3>
-
-
-<p>
-Crystal clear windows and fresh spaces.
-</p>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="service-card">
-
-<div class="service-img">
-
-<img src="images/cleaning4.jpg">
-
-</div>
-
-
-<div class="service-content">
-
-<div class="service-icon">
-
-<i class="fa fa-broom"></i>
-
-</div>
-
-
-<h3>
-Carpet Cleaning
-</h3>
-
-
-<p>
-Deep cleaning that restores freshness.
-</p>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="service-card">
-
-<div class="service-img">
-
-<img src="images/gallery6.jpg">
-
-</div>
-
-
-<div class="service-content">
-
-<div class="service-icon">
-
-<i class="fa fa-building"></i>
-
-</div>
-
-
-<h3>
-Office Cleaning
-</h3>
-
-
-<p>
-Professional workplace cleaning.
-</p>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="service-card">
-
-<div class="service-img">
-
-<img src="images/gallery3.jpg">
-
-</div>
-
-
-<div class="service-content">
-
-<div class="service-icon">
-
-<i class="fa fa-hospital"></i>
-
-</div>
-
-
-<h3>
-Deep Cleaning
-</h3>
-
-
-<p>
-Detailed cleaning for healthier spaces.
-</p>
-
-
-</div>
-
-</div>
-
-
-
-</div>
-
-</div>
-
-
-
-
-<button class="carousel-btn next-btn" id="nextBtn">
-
-<i class="fa fa-chevron-right"></i>
-
-</button>
-
-
-
-</div>
-
-
-
-</div>
-
-
+<section class="svc-section" id="svc-section">
+  <div class="svc-container">
+
+    <!-- Information Header -->
+    <div class="svc-header reveal">
+      <h5 class="svc-subtitle">OUR SERVICES</h5>
+      <h2 class="svc-main-title">Awesome Cleaning Services For You</h2>
+      <p class="svc-description">
+        From residential cleaning to commercial maintenance, we provide professional
+        solutions designed to keep every space fresh, healthy and spotless.
+      </p>
+      <a href="services.html" class="svc-btn-more">More Services</a>
+    </div>
+
+    <!-- Interactive Carousel Component -->
+    <div class="svc-slider-wrapper reveal">
+      
+      <button class="svc-arrow-btn svc-prev-btn" id="svcPrevBtn" aria-label="Previous Service">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+
+      <div class="svc-viewport">
+        <div class="svc-track" id="svcTrack">
+
+          <article class="svc-card">
+            <div class="svc-card-img">
+              <img src="images/housecleaning1.png" alt="Home Cleaning">
+            </div>
+            <div class="svc-card-body">
+              <div class="svc-card-icon"><i class="fa fa-home"></i></div>
+              <h3 class="svc-card-title">Home Cleaning</h3>
+              <p class="svc-card-text">Complete cleaning solutions for your home.</p>
+            </div>
+          </article>
+
+          <article class="svc-card">
+            <div class="svc-card-img">
+              <img src="images/cleaning6.jpg" alt="Window Cleaning">
+            </div>
+            <div class="svc-card-body">
+              <div class="svc-card-icon"><i class="fa fa-window-maximize"></i></div>
+              <h3 class="svc-card-title">Window Cleaning</h3>
+              <p class="svc-card-text">Crystal clear windows and fresh spaces.</p>
+            </div>
+          </article>
+
+          <article class="svc-card">
+            <div class="svc-card-img">
+              <img src="images/carpet-cleaning1.jpg" alt="Carpet Cleaning">
+            </div>
+            <div class="svc-card-body">
+              <div class="svc-card-icon"><i class="fa fa-broom"></i></div>
+              <h3 class="svc-card-title">Carpet Cleaning</h3>
+              <p class="svc-card-text">Deep cleaning that restores freshness.</p>
+            </div>
+          </article>
+
+          <article class="svc-card">
+            <div class="svc-card-img">
+              <img src="images/gallery6.jpg" alt="Office Cleaning">
+            </div>
+            <div class="svc-card-body">
+              <div class="svc-card-icon"><i class="fa fa-building"></i></div>
+              <h3 class="svc-card-title">Office Cleaning</h3>
+              <p class="svc-card-text">Professional workplace cleaning.</p>
+            </div>
+          </article>
+
+          <article class="svc-card">
+            <div class="svc-card-img">
+              <img src="images/gallery3.jpg" alt="Deep Cleaning">
+            </div>
+            <div class="svc-card-body">
+              <div class="svc-card-icon"><i class="fa fa-hospital"></i></div>
+              <h3 class="svc-card-title">Deep Cleaning</h3>
+              <p class="svc-card-text">Detailed cleaning for healthier spaces.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <button class="svc-arrow-btn svc-next-btn" id="svcNextBtn" aria-label="Next Service">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+
+    </div>
+
+  </div>
 </section>
 
 
@@ -655,107 +486,120 @@ Detailed cleaning for healthier spaces.
 </section>
 
 
-
-
-
-
-
 <!-- Team Section -->
 <section class="team-section" id="team">
-    <div class="container team-container">
-        <!-- Section Header Info -->
+    <div class="container">
+
         <div class="team-header">
             <div class="team-title-box">
                 <h5>OUR STAFF</h5>
                 <h2>Meet Our Highly Experienced Staff</h2>
             </div>
+
             <div class="team-desc-box">
-                <p>Behind every spotless space is a team of hardworking professionals committed to excellence. Our experienced staff bring expertise, reliability, and a passion for quality service to every job, ensuring your home or business receives the care and attention it deserves.</p>
+                <p>
+                    Behind every spotless space is a team of hardworking
+                    professionals committed to excellence. Our experienced
+                    staff bring expertise, reliability, and a passion for
+                    quality service to every job.
+                </p>
             </div>
         </div>
 
-        <!-- Carousel Wrapper -->
-        <div class="team-carousel-wrapper">
-            <!-- Left & Right Arrow Buttons -->
-            <button class="team-nav-btn team-prev" id="teamPrevBtn"><i class="fa fa-chevron-left"></i></button>
-            <button class="team-nav-btn team-next" id="teamNextBtn"><i class="fa fa-chevron-right"></i></button>
+        <div class="team-grid">
 
-            <!-- Track Container -->
-            <div class="team-track-container">
-                <div class="team-track" id="teamTrack">
-                    
-                    <!-- Team Member 1 -->
-                    <div class="team-card">
-                        <div class="team-img-box">
-                            <img src="images/cleaner2.png" alt="Cleaner">
-                            <!-- Social Icons Overlay -->
-                            <div class="team-socials">
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-info-box">
-                            <h3>Sarah Namukasa</h3>
-                            <p>Supervisor</p>
-                        </div>
-                    </div>
+            <!-- Card 1 -->
+            <article class="team-card">
 
-                    <!-- Team Member 2 -->
-                    <div class="team-card">
-                        <div class="team-img-box">
-                            <img src="images/worker1.png" alt="Cleaner">
-                            <div class="team-socials">
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-info-box">
-                            <h3>Feliz Akankwasa</h3>
-                            <p>Supervisor</p>
-                        </div>
-                    </div>
+                <div class="team-image">
 
-                    <!-- Team Member 3 -->
-                    <div class="team-card">
-                        <div class="team-img-box">
-                            <img src="images/hapicleaner.png" alt="Cleaner">
-                            <div class="team-socials">
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-info-box">
-                            <h3>Aisha Nambasa</h3>
-                            <p>Residential Cleaning Expert</p>
-                        </div>
-                    </div>
+                    <img src="images/cleaner2.png" alt="Sarah Namukasa">
 
-                    <!-- Team Member 4 -->
-                    <div class="team-card">
-                        <div class="team-img-box">
-                            <img src="images/gallery31.jpg" alt="Cleaner">
-                            <div class="team-socials">
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-info-box">
-                            <h3>Ritah Nakanwagi</h3>
-                            <p>Commercial Cleaning Specialist</p>
-                        </div>
+                    <div class="team-socials">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
 
                 </div>
-            </div>
+
+                <div class="team-info">
+                    <h3>Sarah Namukasa</h3>
+                    <span>Supervisor</span>
+                </div>
+
+            </article>
+
+            <!-- Card 2 -->
+            <article class="team-card">
+
+                <div class="team-image">
+
+                    <img src="images/worker1.png" alt="Feliz Akankwasa">
+
+                    <div class="team-socials">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="team-info">
+                    <h3>Feliz Akankwasa</h3>
+                    <span>Supervisor</span>
+                </div>
+
+            </article>
+
+            <!-- Card 3 -->
+            <article class="team-card">
+
+                <div class="team-image">
+
+                    <img src="images/hapicleaner.png" alt="Aisha Nambasa">
+
+                    <div class="team-socials">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="team-info">
+                    <h3>Aisha Nambasa</h3>
+                    <span>Residential Cleaning Expert</span>
+                </div>
+
+            </article>
+
+            <!-- Card 4 -->
+            <article class="team-card">
+
+                <div class="team-image">
+
+                    <img src="images/gallery26.jpg" alt="Ritah Nakanwagi">
+
+                    <div class="team-socials">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="team-info">
+                    <h3>Ritah Nakanwagi</h3>
+                    <span>Commercial Cleaning Specialist</span>
+                </div>
+
+            </article>
+
         </div>
+
     </div>
 </section>
-
-
 
 
 
@@ -940,7 +784,7 @@ Detailed cleaning for healthier spaces.
                 <h3>Get In Touch</h3>
                 <p><i class="fa fa-map-marker-alt"></i> mukono uganda</p>
                 <p><i class="fa fa-phone-alt"></i> +256 789 384046</p>
-                <p><i class="fa fa-envelope"></i> info@example.com</p>
+                <p><i class="fa fa-envelope"></i> info@surestepcleaners.com</p>
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -960,7 +804,7 @@ Detailed cleaning for healthier spaces.
             </div>
             <div class="footer-col">
                 <h3>Newsletter</h3>
-                <p>>Stay connected with us! Subscribe to receive cleaning tips, special promotions, and the latest news about our professional cleaning services.</p>
+                <p>Stay connected with us! Subscribe to receive cleaning tips, special promotions, and the latest news about our professional cleaning services.</p>
                 <form class="newsletter-form">
                     <input type="email" placeholder="Your email">
                     <button type="submit">EMAIL US</button>
@@ -969,7 +813,7 @@ Detailed cleaning for healthier spaces.
         </div>
         <div class="footer-bottom">
             <div class="container copyright">
-                <p>&copy; SURE STEP, All Rights Reserved. Designed by omuga phillip</p>
+                <p>&copy; Sure-Step Cleaning Solutions, All Rights Reserved. Designed by omuga phillips</p>
                 <div class="footer-links">
                     <a href="#">Privacy</a>
                     <a href="#">Terms</a>

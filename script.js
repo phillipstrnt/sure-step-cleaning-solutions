@@ -627,3 +627,125 @@ teamTrack.addEventListener("mouseleave",()=>{
 
 
 
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("svcTrack");
+  const prevBtn = document.getElementById("svcPrevBtn");
+  const nextBtn = document.getElementById("svcNextBtn");
+  const cards = document.querySelectorAll(".svc-card");
+
+  if (!track || !prevBtn || !nextBtn || cards.length === 0) return;
+
+  let currentIndex = 0;
+  let autoScrollTimer = null;
+
+  // Determine how many cards fit in view based on screen width
+  const getVisibleCardsCount = () => {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+  };
+
+  const getMaxIndex = () => {
+    return Math.max(0, cards.length - getVisibleCardsCount());
+  };
+
+  // Perform slide animation calculation
+  const moveSlider = () => {
+    const cardWidthPercentage = 100 / getVisibleCardsCount();
+    track.style.transform = `translateX(-${currentIndex * cardWidthPercentage}%)`;
+  };
+
+  const nextSlide = () => {
+    if (currentIndex < getMaxIndex()) {
+      currentIndex++;
+    } else {
+      currentIndex = 0; // Wrap back to first slide
+    }
+    moveSlider();
+  };
+
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = getMaxIndex(); // Wrap to last slide
+    }
+    moveSlider();
+  };
+
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    resetAutoScroll();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    resetAutoScroll();
+  });
+
+  // Recalculate layout on window resize
+  window.addEventListener("resize", () => {
+    if (currentIndex > getMaxIndex()) {
+      currentIndex = getMaxIndex();
+    }
+    moveSlider();
+  });
+
+  // Touch Swipe Integration for Mobile Devices
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+
+  track.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    stopAutoScroll();
+  });
+
+  track.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    currentX = e.touches[0].clientX;
+  });
+
+  track.addEventListener("touchend", () => {
+    if (!isDragging) return;
+    const diffX = currentX - startX;
+
+    // Threshold of 50px for swipe action
+    if (Math.abs(diffX) > 50) {
+      if (diffX < 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+    isDragging = false;
+    startAutoScroll();
+  });
+
+  // Automatic scrolling loop (every 4 seconds)
+  const startAutoScroll = () => {
+    autoScrollTimer = setInterval(nextSlide, 4000);
+  };
+
+  const stopAutoScroll = () => {
+    if (autoScrollTimer) clearInterval(autoScrollTimer);
+  };
+
+  const resetAutoScroll = () => {
+    stopAutoScroll();
+    startAutoScroll();
+  };
+
+  // Pause on mouse hover for desktop users
+  track.addEventListener("mouseenter", stopAutoScroll);
+  track.addEventListener("mouseleave", startAutoScroll);
+
+  // Initialize auto-scrolling
+  startAutoScroll();
+});
+
+
